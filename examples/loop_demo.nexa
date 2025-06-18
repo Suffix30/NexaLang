@@ -1,0 +1,8 @@
+let x: Int = 5;
+let y: Int = 10;
+
+x = y;
+y += x;
+
+say "Value of x: {x}";
+say "Value of y: {y}";

@@ -1,0 +1,97 @@
+{
+    "Variable Declaration": {
+        "prefix": "let",
+        "body": [
+            "let ${1:name}: ${2:Int} = ${3:0};"
+        ],
+        "description": "Declare a new variable"
+    },
+    "Function Declaration": {
+        "prefix": "fn",
+        "body": [
+            "fn ${1:functionName}(${2:param}: ${3:Int}) -> ${4:Int} {",
+            "    ${5:// function body}",
+            "    return ${6:result};",
+            "}"
+        ],
+        "description": "Declare a new function"
+    },
+    "AI Optimized Function": {
+        "prefix": "aifn",
+        "body": [
+            "@ai.optimize",
+            "fn ${1:functionName}(${2:param}: ${3:Int}) -> ${4:Int} {",
+            "    ${5:// AI-optimized function body}",
+            "    return ${6:result};",
+            "}"
+        ],
+        "description": "Declare an AI-optimized function"
+    },
+    "Actor Declaration": {
+        "prefix": "actor",
+        "body": [
+            "actor ${1:ActorName} {",
+            "    state ${2:stateName}: ${3:Int} = ${4:0};",
+            "    ",
+            "    fn ${5:handle}(${6:msg}: ${7:Int}) {",
+            "        ${8:// message handler}",
+            "    }",
+            "}"
+        ],
+        "description": "Declare a new actor"
+    },
+    "If Statement": {
+        "prefix": "if",
+        "body": [
+            "if ${1:condition} {",
+            "    ${2:// then body}",
+            "} else {",
+            "    ${3:// else body}",
+            "}"
+        ],
+        "description": "If-else statement"
+    },
+    "For Loop": {
+        "prefix": "for",
+        "body": [
+            "for ${1:i} in range(${2:count}) {",
+            "    ${3:// loop body}",
+            "}"
+        ],
+        "description": "For loop"
+    },
+    "While Loop": {
+        "prefix": "while",
+        "body": [
+            "while ${1:condition} {",
+            "    ${2:// loop body}",
+            "}"
+        ],
+        "description": "While loop"
+    },
+    "Try-Catch": {
+        "prefix": "try",
+        "body": [
+            "try {",
+            "    ${1:// code that might fail}",
+            "} catch {",
+            "    ${2:// error handler}",
+            "}"
+        ],
+        "description": "Try-catch block"
+    },
+    "Say Statement": {
+        "prefix": "say",
+        "body": [
+            "say \"${1:message}\";"
+        ],
+        "description": "Output a message"
+    },
+    "Say with Expression": {
+        "prefix": "sayexpr",
+        "body": [
+            "say \"${1:text} {${2:expression}}\";"
+        ],
+        "description": "Output with expression interpolation"
+    }
+} 

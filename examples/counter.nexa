@@ -1,0 +1,6 @@
+let x: Int = 0;
+let increment: Int = 10;
+x = 5;
+x += increment;
+
+say "Final value of x: {x}";

@@ -1,0 +1,72 @@
+(* NexaLang Grammar in Extended Backus-Naur Form (EBNF) *)
+
+program ::= statement*
+
+statement ::= let_stmt
+           | assign_stmt
+           | fn_decl
+           | actor_decl
+           | spawn_stmt
+           | send_stmt
+           | if_stmt
+           | for_stmt
+           | while_stmt
+           | try_stmt
+           | say_stmt
+           | return_stmt
+
+(* Variable Declarations and Assignments *)
+let_stmt ::= "let" identifier ":" type "=" expression ";"
+assign_stmt ::= identifier ("=" | "+=") expression ";"
+
+(* Function Declarations *)
+fn_decl ::= annotation? "fn" identifier "(" params? ")" ("->" type)? "{" statement* "}"
+annotation ::= "@ai.optimize"
+params ::= param ("," param)*
+param ::= identifier ":" type
+return_stmt ::= "return" expression ";"
+
+(* Actor Declarations *)
+actor_decl ::= "actor" identifier "{" actor_member* "}"
+actor_member ::= state_decl | fn_decl
+state_decl ::= "state" identifier ":" type "=" expression ";"
+
+(* Actor Operations *)
+spawn_stmt ::= "let" identifier "=" identifier ".spawn()" ";"
+send_stmt ::= identifier ".send(" expression ")" ";"
+
+(* Control Flow *)
+if_stmt ::= "if" condition "{" statement* "}" ("else" "{" statement* "}")?
+for_stmt ::= "for" identifier "in" "range(" expression ")" "{" statement* "}"
+while_stmt ::= "while" condition "{" statement* "}"
+condition ::= identifier ">" expression
+
+(* Error Handling *)
+try_stmt ::= "try" "{" statement* "}" "catch" "{" statement* "}"
+
+(* Output *)
+say_stmt ::= "say" string_literal ";"
+
+(* Expressions *)
+expression ::= literal
+            | identifier
+            | function_call
+            | math_operation
+
+literal ::= integer_literal
+function_call ::= identifier "(" args? ")"
+math_operation ::= "math." ("add" | "subtract" | "multiply" | "divide") "(" args ")"
+args ::= expression ("," expression)*
+
+(* String Literals *)
+string_literal ::= '"' (char | "{" expression "}")* '"'
+
+(* Basic Types *)
+type ::= "Int" | identifier
+identifier ::= letter (letter | digit)*
+integer_literal ::= digit+
+
+(* Character Classes *)
+letter ::= [a-zA-Z]
+digit ::= [0-9]
+char ::= [^"{}\n] (* Any character except quotes, braces, and newline *)

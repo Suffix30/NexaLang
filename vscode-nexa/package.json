@@ -1,0 +1,39 @@
+{
+    "name": "nexalang",
+    "displayName": "NexaLang",
+    "description": "Language support for NexaLang (.nexa files)",
+    "version": "0.3.2",
+    "publisher": "NET",
+    "author": "NET",
+    "icon": "icon.png",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": ["Programming Languages"],
+    "contributes": {
+        "languages": [{
+            "id": "nexa",
+            "aliases": ["NexaLang", "nexa"],
+            "extensions": [".nexa"],
+            "configuration": "./language-configuration.json",
+            "icon": {
+                "light": "./icons/nexa-file-icon.png",
+                "dark": "./icons/nexa-file-icon.png"
+            }
+        }],
+        "grammars": [{
+            "language": "nexa",
+            "scopeName": "source.nexa",
+            "path": "./syntaxes/nexa.tmLanguage.json"
+        }],
+        "snippets": [{
+            "language": "nexa",
+            "path": "./snippets/nexa.json"
+        }],
+        "iconThemes": [{
+            "id": "nexa-icon-theme",
+            "label": "NexaLang Icon Theme",
+            "path": "./icons/nexa-icon-theme.json"
+        }]
+    }
+} 

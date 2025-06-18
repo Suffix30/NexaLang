@@ -1,0 +1,47 @@
+{
+    "python.analysis.typeCheckingMode": "basic",
+    "cursorpyright.analysis.typeCheckingMode": "basic",
+    "files.associations": {
+        "*.nexa": "nexa"
+    },
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "keyword.control.nexa",
+                "settings": {
+                    "foreground": "#C586C0"
+                }
+            },
+            {
+                "scope": "keyword.other.nexa",
+                "settings": {
+                    "foreground": "#569CD6"
+                }
+            },
+            {
+                "scope": "entity.name.function.nexa",
+                "settings": {
+                    "foreground": "#DCDCAA"
+                }
+            },
+            {
+                "scope": "string.quoted.double.nexa",
+                "settings": {
+                    "foreground": "#CE9178"
+                }
+            },
+            {
+                "scope": "constant.numeric.nexa",
+                "settings": {
+                    "foreground": "#B5CEA8"
+                }
+            },
+            {
+                "scope": "comment.line.double-slash.nexa",
+                "settings": {
+                    "foreground": "#6A9955"
+                }
+            }
+        ]
+    }
+}

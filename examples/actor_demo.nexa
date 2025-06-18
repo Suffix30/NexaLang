@@ -1,0 +1,7 @@
+actor SimpleActor {
+    state value: Int = 100;
+}
+
+let actor1 = SimpleActor.spawn();
+
+say "Actor spawned successfully";

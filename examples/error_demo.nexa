@@ -1,0 +1,10 @@
+let x: Int = 5;
+
+try {
+  say "Trying math...";
+  say "Result: {math.add(x, x)}";
+} catch {
+  say "Error occurred!";
+}
+
+say "Continuing after try-catch...";

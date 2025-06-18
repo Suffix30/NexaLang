@@ -1,0 +1,16 @@
+{
+    "iconDefinitions": {
+        "_nexa": {
+            "iconPath": "./nexa-file-icon.png"
+        }
+    },
+    "fileExtensions": {
+        "nexa": "_nexa"
+    },
+    "fileNames": {},
+    "folderNames": {},
+    "folderNamesExpanded": {},
+    "languageIds": {
+        "nexa": "_nexa"
+    }
+} 
